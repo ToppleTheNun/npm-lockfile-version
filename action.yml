@@ -1,0 +1,14 @@
+name: "npm-lockfile-version"
+description: "Make sure that the package-lock.json in your project is using the right version"
+author: "ToppleTheNun"
+inputs:
+  cwd:
+    description: "Working directory to check package-lock in"
+    required: false
+  version:
+    description: "Optionally specify the lockfile version"
+    default: "2"
+    required: false
+runs:
+  using: "node16"
+  main: "dist/index.js"
