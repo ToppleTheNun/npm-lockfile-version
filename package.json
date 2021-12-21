@@ -1,5 +1,5 @@
 {
-  "name": "typescript-action",
+  "name": "npm-lockfile-version",
   "version": "0.0.0",
   "private": true,
   "description": "TypeScript template action",
@@ -29,6 +29,7 @@
     "@actions/core": "^1.6.0"
   },
   "devDependencies": {
+    "@changesets/cli": "2.19.0",
     "@types/node": "^17.0.2",
     "@typescript-eslint/parser": "^5.0.0",
     "@vercel/ncc": "^0.33.1",
