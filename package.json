@@ -10,6 +10,7 @@
     "format-check": "prettier --check src",
     "lint": "eslint src --ext ts",
     "package": "ncc build --source-map --license licenses.txt",
+    "prepare": "is-ci || husky install",
     "test": "jest",
     "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
   },
@@ -36,6 +37,8 @@
     "eslint-plugin-github": "^4.3.2",
     "eslint-plugin-jest": "^25.0.5",
     "eslint-plugin-prettier": "4.0.0",
+    "husky": "7.0.4",
+    "is-ci": "3.0.1",
     "jest": "^27.2.5",
     "js-yaml": "^4.1.0",
     "prettier": "2.4.1",
