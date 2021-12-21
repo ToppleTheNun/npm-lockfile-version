@@ -24,4 +24,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
+          cwd: "./__tests__/__fixtures__/v2"
           version: 2

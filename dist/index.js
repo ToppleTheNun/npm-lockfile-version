@@ -38,11 +38,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(186));
 const validate_package_lock_1 = __nccwpck_require__(62);
 const run = () => __awaiter(void 0, void 0, void 0, function* () {
+    var _a;
     try {
+        const cwd = (_a = core.getInput("cwd")) !== null && _a !== void 0 ? _a : process.cwd();
+        core.debug(`Checking lockfile in directory ${cwd}`); // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
         const version = parseInt(core.getInput("version"), 10);
         core.debug(`Ensuring lockfile has version ${version}`); // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
         core.debug(new Date().toTimeString());
-        yield (0, validate_package_lock_1.validatePackageLock)({ version });
+        yield (0, validate_package_lock_1.validatePackageLock)({ cwd, version });
         core.debug(new Date().toTimeString());
     }
     catch (error) {
