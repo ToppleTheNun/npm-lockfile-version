@@ -26,12 +26,14 @@ jobs:
       - name: Setup Node.js 16.x
         uses: actions/setup-node@v2
         with:
+          cache: npm
           node-version: 16.x
 
-      - uses: bahmutov/npm-install@v1
+      - name: Install dependencies
+        run: npm install
 
       - name: Rebuild the dist/ directory
-        run: yarn build
+        run: npm run build
 
       - name: Compare the expected and actual dist/ directories
         run: |
