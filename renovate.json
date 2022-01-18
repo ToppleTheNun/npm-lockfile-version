@@ -1,5 +1,9 @@
 {
   "extends": [
-    "config:base"
+    "config:js-lib",
+    "group:linters",
+    "group:postcss",
+    "group:test",
+    "npm:unpublishSafe"
   ]
 }
