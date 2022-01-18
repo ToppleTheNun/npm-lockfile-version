@@ -11,13 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set Node.js 16.x
+      - name: Setup Node.js 16.x
         uses: actions/setup-node@v2
         with:
+          cache: npm
           node-version: 16.x
-      - uses: bahmutov/npm-install@v1
-      - run: |
-          yarn all
+      - run: npm install
+      - run: npm run build
+      - run: npm run format
+      - run: npm run lint
+      - run: npm run package
+      - run: npm test
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
