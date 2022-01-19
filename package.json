@@ -1,6 +1,6 @@
 {
   "name": "npm-lockfile-version",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "description": "NPM lockfile version checker via GitHub actions",
   "main": "lib/main.js",
