@@ -4,7 +4,7 @@
     "group:linters",
     "group:postcss",
     "group:test",
-    "npm:unpublishSafe",
+    "npm:unpublishSafe"
   ],
   "labels": [
     "automerge"
