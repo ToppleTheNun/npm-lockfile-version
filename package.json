@@ -4,7 +4,7 @@
   "description": "NPM lockfile version checker via GitHub actions",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/ToppleTheNun/npm-lockfile-version.git"
   },
   "author": "Richard Harrah",
   "license": "MIT",
