@@ -9,5 +9,11 @@
   ],
   "labels": [
     "automerge"
-  ]
+  ],
+  "postUpgradeTasks": {
+    "commands": ["yarn build", "yarn package"],
+    "fileFilters": ["package.json", "yarn.lock", "dist/**"],
+    "executionMode": "update"
+  },
+  "prCreation": "not-pending"
 }
